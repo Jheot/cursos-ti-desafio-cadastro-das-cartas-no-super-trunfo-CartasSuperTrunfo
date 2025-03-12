@@ -5,5 +5,6 @@ int main (){
 
    int Cidade;
    char Populacao[50];
+   float rendapercapta;
 
 }
