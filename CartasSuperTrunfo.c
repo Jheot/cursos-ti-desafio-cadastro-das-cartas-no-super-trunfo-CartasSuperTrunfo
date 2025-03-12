@@ -4,5 +4,6 @@ int main (){
    printf("Desafio Super Trunfo");
 
    int Cidade;
+   float Populacao;
 
 }
