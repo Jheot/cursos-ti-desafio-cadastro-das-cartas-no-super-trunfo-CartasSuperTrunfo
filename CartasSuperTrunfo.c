@@ -12,7 +12,7 @@ int main (){
 
    printf("Carta 1\n");
    printf("Digite o estado:\n");
-   scanf("%c", &Estado);
+   scanf("%c", &Estado); //%c utilizado pois ''char Estado'' possui apenas 1 caractere
    
    printf("Digite o código:\n");
    scanf("%s", Codigo);
