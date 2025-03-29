@@ -4,16 +4,16 @@ int main (){
    printf("Desafio Super Trunfo \n");
 
    int PontosTuristicos, Populacao;
-   char NomeCidade[20];
+   char NomeCidade[30];
    char Codigo[3];
-   char Estado[24];
+   char Estado[25];
    float Area;
    float PIB;
 
 
    printf("Carta1\n");
    printf("Digite o estado:\n");
-   scanf("%c", Estado); //%c utilizado pois ''char Estado'' possui apenas 1 caractere
+   scanf("%s", Estado);
    
    printf("Digite o código:\n");
    scanf("%s", Codigo);
@@ -34,7 +34,7 @@ int main (){
    scanf("%d", &PontosTuristicos);
 
    printf("Carta1\n");
-   printf("Estado: %c\n", Estado);
+   printf("Estado: %s\n", Estado);
    printf("Código: %s\n", Codigo);
    printf("Nome da cidade: %s\n", NomeCidade);
    printf("População: %d\n", Populacao);
@@ -46,7 +46,7 @@ int main (){
 
    printf("Carta2\n");
    printf("Digite o estado:\n");
-   scanf(" %c", Estado); // Caractere de ''Espaço'' adicionado antes do "%c" para o scanf ignorar o ''printf("\n")'' acima, feito para melhor visualização do código
+   scanf(" %s", Estado); 
    
    printf("Digite o código:\n");
    scanf("%s", Codigo);
@@ -67,7 +67,7 @@ int main (){
    scanf("%d", &PontosTuristicos);
 
    printf("Carta2\n");
-   printf("Estado: %c\n", Estado);
+   printf("Estado: %s\n", Estado);
    printf("Código: %s\n", Codigo);
    printf("Nome da cidade: %s\n", NomeCidade);
    printf("População: %d\n", Populacao);
