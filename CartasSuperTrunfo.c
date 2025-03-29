@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main (){
-   printf("Desafio Super Trunfo \n");
+   printf("Desafio Super Trunfo \n"); // Não utilizar acentuações como ',' ou '.' para evitar problemas
 
    int PontosTuristicos;
    char NomeCidade1[30], NomeCidade2[30];
