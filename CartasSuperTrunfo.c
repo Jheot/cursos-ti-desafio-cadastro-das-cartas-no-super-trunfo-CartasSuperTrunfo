@@ -4,6 +4,7 @@ int main (){
    printf("Desafio Super Trunfo \n"); // Não utilizar acentuações como ',' ou '.' para evitar problemas
 
    int PontosTuristicos1, PontosTuristicos2;
+   int ResultadoPop, ResultadoArea, ResultadoPIB, ResultadoPT, ResultadoDP, ResultadoPerC, ResultadoSP;
    char NomeCidade1[30], NomeCidade2[30];
    char Codigo1[3], Codigo2[3];
    char Estado1[24], Estado2[25];
@@ -77,7 +78,7 @@ int main (){
    printf("Estado: %s\n", Estado2);
    printf("Código: %s\n", Codigo2);
    printf("Nome da cidade: %s\n", NomeCidade2);
-   printf("População: %f\n", Populacao2);
+   printf("População: %lu\n", Populacao2);
    printf("Área: %.2f (km²)\n", Area2); // por conta das restrições atribuidas a esta atividade, o resultado de printf("Área: %.2f...") irá exibir, EX: Área 123456.00 (km²) ao invés de 1234.56 (km²)  
    printf("PIB: %.2f\n", PIB2);
    printf("Número de pontos turísticos: %d\n", PontosTuristicos2);
@@ -97,19 +98,35 @@ int main (){
   printf ("O PIB per capita da carta 2 é: %.2f\n", PerCapita2);
 
   if (PerCapita1 > PerCapita2){
-    printf("Carta 1 venceu");
+    printf("Carta 1 tem o PIB per Capita maior\n");
   }else{
-    printf("Carta 2 venceu");
+    printf("Carta 2 tem o PIB per Capita maior\n");
   }
 
   SuperPoder1 = (float) (Populacao1 + Area1 + PIB1 + PontosTuristicos1 + PerCapita1 + Densidade1);
-  printf ("O Super Poder da carta 1 equivale a: %.3f\n",SuperPoder1);
+  printf ("O Super Poder da carta 1 equivale a: %.2f\n",SuperPoder1);
 
   SuperPoder2 = (float) (Populacao2 + Area2 + PIB2 + PontosTuristicos2 + PerCapita2 + Densidade2);
-  printf ("O Super Poder da carta 2 equivale a: %3.f\n",SuperPoder2);
+  printf ("O Super Poder da carta 2 equivale a: %.2f\n",SuperPoder2);
 
-  printf("***Quem é o vencedor?***\n");
+  printf("***Quem é o vencedor?***\n"); //1 para CARTA1 0 para CARTA2
+  printf("(1 significa carta 1, e 0 significa carta 2)\n");
 
+  ResultadoPop = (Populacao1 > Populacao2);
+  ResultadoArea = (Area1 > Area2);
+  ResultadoPIB = (PIB1 > PIB2);
+  ResultadoPT = (PontosTuristicos1 > PontosTuristicos2);
+  ResultadoDP = (Densidade1 < Densidade2);
+  ResultadoPerC = (PerCapita1 > PerCapita2);
+  ResultadoSP = (SuperPoder1 > SuperPoder2);
+
+  printf("População: %d\n", ResultadoPop);
+  printf("Área: %d\n", ResultadoArea);
+  printf("PIB: %d\n", ResultadoPIB);
+  printf("Pontos Turísticos: %d\n", ResultadoPT);
+  printf("Densidade Populacional: %d\n", ResultadoDP);
+  printf("PIB per capita: %d\n", ResultadoPerC);
+  printf("Super Poder: %d\n", ResultadoSP);
 
 
   return 0;
