@@ -54,26 +54,26 @@ int main (){
 
    //CARTA 2
 
-    printf("Carta2\n");
-    printf("Digite o estado:\n");
+   printf("Carta2\n");
+   printf("Digite o estado:\n");
    scanf(" %24s", Estado2); 
    
-    printf("Digite o código:\n");
+   printf("Digite o código:\n");
    scanf("%2s", Codigo2);
 
-    printf("Digite o nome da cidade:\n");
+   printf("Digite o nome da cidade:\n");
    scanf("%29s", NomeCidade2);
 
-    printf("Digite a população:\n");
+   printf("Digite a população:\n");
    scanf("%lu", &Populacao2);
 
-    printf("Digite a Área(km²):\n");
+   printf("Digite a Área(km²):\n");
    scanf("%f", &Area2);
 
-    printf("Digite o PIB:\n");
+   printf("Digite o PIB:\n");
    scanf("%f", &PIB2);
 
-    printf("Digite o número de pontos turísticos:\n");
+   printf("Digite o número de pontos turísticos:\n");
    scanf("%d", &PontosTuristicos2);
 
     printf("Carta2\n");
@@ -113,15 +113,15 @@ int main (){
 
     printf("***Quem é o vencedor?***\n"); //1 para CARTA1 0 para CARTA2
     printf("(1 significa carta 1, e 0 significa carta 2)\n");
-
-  ResultadoPop = (Populacao1 > Populacao2);
-  ResultadoArea = (Area1 > Area2);
-  ResultadoPIB = (PIB1 > PIB2);
-  ResultadoPT = (PontosTuristicos1 > PontosTuristicos2);
-  ResultadoDP = (Densidade1 < Densidade2);
-  ResultadoPerC = (PerCapita1 > PerCapita2);
-  ResultadoSP = (SuperPoder1 > SuperPoder2);
-
+  
+    ResultadoPop = (Populacao1 > Populacao2); //Simulando o resultado
+    ResultadoArea = (Area1 > Area2);
+    ResultadoPIB = (PIB1 > PIB2);
+    ResultadoPT = (PontosTuristicos1 > PontosTuristicos2);
+    ResultadoDP = (Densidade1 < Densidade2);
+    ResultadoPerC = (PerCapita1 > PerCapita2);
+    ResultadoSP = (SuperPoder1 > SuperPoder2);
+  
     printf("População: %d\n", ResultadoPop);
     printf("Área: %d\n", ResultadoArea);
     printf("PIB: %d\n", ResultadoPIB);
@@ -131,7 +131,7 @@ int main (){
     printf("Super Poder: %d\n", ResultadoSP);
 
 int escolhaJogador, escolhaMaquina;
-  srand(time(0));
+
   printf("***Escolha um atributo para batalhar***\n");
   printf("%d", NomeCidade1);
   printf("1. População");
@@ -139,33 +139,38 @@ int escolhaJogador, escolhaMaquina;
   printf("3. PIB");
   printf("4. Número de pontos turísticos");
   printf("5. Densidade demográfica");
+  scanf("%d", escolhaJogador);
 
-  escolhaMaquina = rand () % 6 + 1;
-  
 do {switch (escolhaJogador) {
   case 1:
-    printf("Jogador: População -");
+    escolhaJogador == Populacao1;
+    escolhaMaquina == Populacao2;
     break;
   case 2:
-    printf("Jogador: Área -");
+    escolhaJogador == Area1;
+    escolhaMaquina == Area2;
     break;
   case 3:
-    printf("PIB");
+    escolhaJogador == PIB1;
+    escolhaMaquina == PIB2;
     break;
   case 4:
-    printf("Jogador: Pontos turísticos -");
+    escolhaJogador == PontosTuristicos1;
+    escolhaMaquina == PontosTuristicos2;
     break;
   case 5:
-    printf("Jogador: Densidade demográfico -");
+    escolhaJogador == Densidade1;
+    escolhaMaquina == Densidade2;
     break;
   default:
     printf("%d não é válido, tente novamente", escolhaJogador);
+    break;
 }
-}while (escolhaJogador >=1 && escolhaJogador<= 5);
+}while (escolhaJogador >= 1 && escolhaJogador <= 5);
 
   if ("%d" == "%d", escolhaJogador, escolhaMaquina){
     printf("***Empate***");
-  } else if ("%d" >= "%d", escolhaJogador, escolhaMaquina){
+  } else if ("%d" > "%d", escolhaJogador, escolhaMaquina){
     printf("***Jogador Venceu!***");
   } else {
     printf("***Computador venceu!***");
